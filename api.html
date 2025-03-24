@@ -655,44 +655,7 @@
                         </div>
                     </div>
                 </section>
-                
-                <section class="section">
-                    <h2>Integration Examples</h2>
-                    
-                    <h3>Using as an Image Source</h3>
-                    <p>You can use the API URL directly as an image source in HTML:</p>
-                    <pre>&lt;img src="https://yourwebsite.com/qr-api.html?type=url&url=https%3A%2F%2Fexample.com&size=200" 
-     alt="QR Code for example.com"&gt;</pre>
-                    
-                    <h3>JavaScript Integration</h3>
-                    <p>You can dynamically generate QR codes in your application:</p>
-                    <pre>
-// Create a function to generate QR code URL
-function getQRCodeUrl(options) {
-    const baseUrl = 'https://yourwebsite.com/qr-api.html';
-    const params = new URLSearchParams();
-    
-    // Add parameters to URL
-    for (const [key, value] of Object.entries(options)) {
-        params.append(key, value);
-    }
-    
-    return \`\${baseUrl}?\${params.toString()}\`;
-}
 
-// Example usage
-const qrUrl = getQRCodeUrl({
-    type: 'url',
-    url: 'https://example.com',
-    size: 300,
-    foreground: '#000000',
-    background: '#ffffff'
-});
-
-// Set as image source
-document.getElementById('qrImage').src = qrUrl;</pre>
-                </section>
-                
                 <section class="section">
                     <h2>Limitations</h2>
                     <ul>
